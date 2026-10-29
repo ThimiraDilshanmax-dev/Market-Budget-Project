@@ -1,0 +1,23 @@
+{
+  "status": "passed",
+  "url": "http://127.0.0.1:8000",
+  "storage": "api",
+  "checks": [
+    "decimal boundary export",
+    "blank input pauses estimate",
+    "budget warning",
+    "save and historical comparison",
+    "backup restore",
+    "duplicate import skipped",
+    "reload persistence",
+    "planner restore",
+    "delete",
+    "separate research comparison",
+    "keyboard chart navigation",
+    "complete accessible data table",
+    "API outage never switches storage",
+    "committed save survives list refresh failure",
+    "all five views at six viewport widths"
+  ],
+  "javascript_errors": []
+}

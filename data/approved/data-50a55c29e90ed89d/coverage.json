@@ -1,0 +1,21 @@
+{
+  "package_rows": 125576,
+  "selected_all_year_rows": 6660,
+  "selected_missing": 157,
+  "retained_rows": 2958,
+  "retained_valid": 2926,
+  "start": "2022-01-03",
+  "end": "2026-03-10",
+  "corrections": 3,
+  "primary_quotes_checked": 15,
+  "sample_audit_years": [
+    2023,
+    2024,
+    2025,
+    2026
+  ],
+  "audit_limit": "2022 sample report URL returned 404. No primary 2022 quote verified. Parser failures and failed retrieval attempts remain in the review log; successful reparses are listed in source_audit.json.",
+  "excluded": "All data before 2022; disputed 2021 keys unavailable",
+  "recent_extension": "Single October reference date kept separate; not appended to model history",
+  "licence": "Package declares GPL-3; upstream CBSL reuse terms require confirmation before external operational use."
+}

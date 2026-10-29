@@ -1,0 +1,41 @@
+[
+  {
+    "date": "2024-07-11",
+    "commodity": "beans",
+    "price": 375.0,
+    "market": "Dambulla",
+    "type": "Wholesale",
+    "unit": "LKR/kg",
+    "source": "cbsl_20240711.pdf",
+    "original_price": 190.0,
+    "source_url": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/pricerpt/price_report_20240711_e.pdf",
+    "source_sha256": "604382a16f518791c63ef9d15022f4dfab799db3f31bfe363132453422b2087b",
+    "status": "primary_verified"
+  },
+  {
+    "date": "2024-07-11",
+    "commodity": "carrot",
+    "price": 345.0,
+    "market": "Dambulla",
+    "type": "Wholesale",
+    "unit": "LKR/kg",
+    "source": "cbsl_20240711.pdf",
+    "original_price": 68.0,
+    "source_url": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/pricerpt/price_report_20240711_e.pdf",
+    "source_sha256": "604382a16f518791c63ef9d15022f4dfab799db3f31bfe363132453422b2087b",
+    "status": "primary_verified"
+  },
+  {
+    "date": "2024-07-11",
+    "commodity": "tomato",
+    "price": 190.0,
+    "market": "Dambulla",
+    "type": "Wholesale",
+    "unit": "LKR/kg",
+    "source": "cbsl_20240711.pdf",
+    "original_price": 210.0,
+    "source_url": "https://www.cbsl.gov.lk/sites/default/files/cbslweb_documents/statistics/pricerpt/price_report_20240711_e.pdf",
+    "source_sha256": "604382a16f518791c63ef9d15022f4dfab799db3f31bfe363132453422b2087b",
+    "status": "primary_verified"
+  }
+]

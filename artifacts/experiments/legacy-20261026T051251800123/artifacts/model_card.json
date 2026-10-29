@@ -1,0 +1,121 @@
+{
+  "version": "mb1.1-29bc006089",
+  "artifact_hash": "29bc006089a462af46bfcc5ced5e371adcde0e0cbe68be0e079c24a7228fbecd",
+  "provenance": {
+    "application_version": "1.2.0",
+    "splits": {
+      "train": [
+        "2022-01-01",
+        "2023-12-31"
+      ],
+      "tuning": [
+        "2024-01-01",
+        "2024-06-30"
+      ],
+      "calibration": [
+        "2024-07-01",
+        "2024-12-31"
+      ],
+      "test_2025": [
+        "2025-01-01",
+        "2025-12-31"
+      ],
+      "later_2026": [
+        "2026-01-01",
+        "2026-03-10"
+      ]
+    },
+    "price_features": [
+      "commodity_id",
+      "latest",
+      "age",
+      "lag7",
+      "lag14",
+      "lag28",
+      "mean7",
+      "mean14",
+      "mean28",
+      "count7",
+      "count14",
+      "count28",
+      "vol7",
+      "vol28",
+      "momentum7",
+      "momentum28",
+      "annual_sin",
+      "annual_cos",
+      "weekday"
+    ],
+    "weather_features": [
+      "wx_nuwara_eliya_prectotcorr_7",
+      "wx_nuwara_eliya_prectotcorr_14",
+      "wx_nuwara_eliya_t2m_7",
+      "wx_nuwara_eliya_t2m_14",
+      "wx_nuwara_eliya_t2m_min_7",
+      "wx_nuwara_eliya_t2m_min_14",
+      "wx_nuwara_eliya_t2m_max_7",
+      "wx_nuwara_eliya_t2m_max_14",
+      "wx_nuwara_eliya_rh2m_7",
+      "wx_nuwara_eliya_rh2m_14",
+      "wx_badulla_prectotcorr_7",
+      "wx_badulla_prectotcorr_14",
+      "wx_badulla_t2m_7",
+      "wx_badulla_t2m_14",
+      "wx_badulla_t2m_min_7",
+      "wx_badulla_t2m_min_14",
+      "wx_badulla_t2m_max_7",
+      "wx_badulla_t2m_max_14",
+      "wx_badulla_rh2m_7",
+      "wx_badulla_rh2m_14",
+      "wx_kandy_matale_prectotcorr_7",
+      "wx_kandy_matale_prectotcorr_14",
+      "wx_kandy_matale_t2m_7",
+      "wx_kandy_matale_t2m_14",
+      "wx_kandy_matale_t2m_min_7",
+      "wx_kandy_matale_t2m_min_14",
+      "wx_kandy_matale_t2m_max_7",
+      "wx_kandy_matale_t2m_max_14",
+      "wx_kandy_matale_rh2m_7",
+      "wx_kandy_matale_rh2m_14"
+    ],
+    "packages": {
+      "lightgbm": "4.6.0",
+      "numpy": "2.3.5",
+      "pandas": "2.2.3"
+    },
+    "code_sha256": {
+      "train.py": "2900f38d651d16a2af746295bf275856f76f132899337a52b47c13c004569aea",
+      "features.py": "02a7235a9057b16a6d48654fa24609cb738e7b266e3f7af335a5612e0ae648c9",
+      "forecast.py": "fb70f2fd5459191cacaa39f510b9963f8f97fc57cae4c9c43e5ec245d3ebb28a",
+      "config.py": "30f953ff22478f52b7d2f6e4b37eee1a30227ce2235f3412b8356f3425f78ad2"
+    }
+  },
+  "selected": "latest_price",
+  "train_end": "2023-12-31",
+  "selection_end": "2024-06-30",
+  "calibration_end": "2024-12-31",
+  "weather_status": "Not used by selected method",
+  "parameters": {
+    "n_estimators": 180,
+    "learning_rate": 0.04,
+    "num_leaves": 9,
+    "max_depth": 4,
+    "min_child_samples": 30,
+    "reg_lambda": 2.0,
+    "verbosity": -1,
+    "random_state": 42,
+    "n_jobs": 2,
+    "deterministic": true,
+    "force_col_wise": true
+  },
+  "features": [],
+  "selection": {
+    "best_baseline": "latest_price",
+    "best_learned": "weather_pooled",
+    "learned_improvement": 0.16962408479891156,
+    "per_commodity_guard_passed": false,
+    "selected": "latest_price",
+    "rule": "Deploy learned model only if tuning basket MAE improves by at least 10% and no commodity MAE regresses by more than 5%. Otherwise use strongest tuning baseline."
+  },
+  "released_for": "Private research replay; operational deployment requires source-rights and freshness review"
+}

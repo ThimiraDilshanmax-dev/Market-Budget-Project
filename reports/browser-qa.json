@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "url": "http://127.0.0.1:8080",
+  "storage": "browser",
+  "checks": [
+    "decimal boundary export",
+    "blank input pauses estimate",
+    "budget warning",
+    "save and historical comparison",
+    "backup restore",
+    "duplicate import skipped",
+    "reload persistence",
+    "planner restore",
+    "delete",
+    "separate research comparison",
+    "keyboard chart navigation",
+    "complete accessible data table",
+    "simultaneous tabs retain both plans",
+    "legacy migration retains values and original",
+    "corrupt data export",
+    "explicit recovery and archive",
+    "large collection restorable backup batches",
+    "all five views at six viewport widths"
+  ],
+  "javascript_errors": []
+}

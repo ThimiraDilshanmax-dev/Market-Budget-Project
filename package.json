@@ -1,0 +1,6 @@
+{
+  "name": "marketbudget-browser-qa",
+  "private": true,
+  "scripts": {"test": "node --test tests/*.test.mjs", "qa": "node scripts/browser_qa.cjs"},
+  "devDependencies": {"playwright": "1.62.1"}
+}

@@ -1,0 +1,134 @@
+{
+  "version": "research-1",
+  "status": "research_only",
+  "seed": 42,
+  "folds": [
+    {
+      "id": "2023Q1",
+      "train_start": "2022-01-01",
+      "train_end": "2022-09-30",
+      "calibration_start": "2022-10-01",
+      "calibration_end": "2022-12-31",
+      "validation_start": "2023-01-01",
+      "validation_end": "2023-03-31"
+    },
+    {
+      "id": "2023Q2",
+      "train_start": "2022-01-01",
+      "train_end": "2022-12-31",
+      "calibration_start": "2023-01-01",
+      "calibration_end": "2023-03-31",
+      "validation_start": "2023-04-01",
+      "validation_end": "2023-06-30"
+    },
+    {
+      "id": "2023Q3",
+      "train_start": "2022-01-01",
+      "train_end": "2023-03-31",
+      "calibration_start": "2023-04-01",
+      "calibration_end": "2023-06-30",
+      "validation_start": "2023-07-01",
+      "validation_end": "2023-09-30"
+    },
+    {
+      "id": "2023Q4",
+      "train_start": "2022-01-01",
+      "train_end": "2023-06-30",
+      "calibration_start": "2023-07-01",
+      "calibration_end": "2023-09-30",
+      "validation_start": "2023-10-01",
+      "validation_end": "2023-12-31"
+    },
+    {
+      "id": "2024Q1",
+      "train_start": "2022-01-01",
+      "train_end": "2023-09-30",
+      "calibration_start": "2023-10-01",
+      "calibration_end": "2023-12-31",
+      "validation_start": "2024-01-01",
+      "validation_end": "2024-03-31"
+    },
+    {
+      "id": "2024Q2",
+      "train_start": "2022-01-01",
+      "train_end": "2023-12-31",
+      "calibration_start": "2024-01-01",
+      "calibration_end": "2024-03-31",
+      "validation_start": "2024-04-01",
+      "validation_end": "2024-06-30"
+    }
+  ],
+  "parameters": {
+    "n_estimators": 180,
+    "learning_rate": 0.04,
+    "num_leaves": 9,
+    "max_depth": 4,
+    "min_child_samples": 30,
+    "reg_lambda": 2.0,
+    "verbosity": -1,
+    "random_state": 42,
+    "n_jobs": 2,
+    "deterministic": true,
+    "force_col_wise": true
+  },
+  "target": {
+    "calendar_days_after_issue": 7,
+    "minimum_observed_quotes": 4
+  },
+  "ewma_half_life_calendar_days": 7,
+  "candidate_families": [
+    "price_pooled",
+    "weather_pooled",
+    "price_individual",
+    "weather_individual"
+  ],
+  "blends": [
+    0.25,
+    0.5,
+    0.75,
+    1.0
+  ],
+  "baselines": [
+    "latest_price",
+    "mean_28d",
+    "prior_year",
+    "ewma_7d"
+  ],
+  "reference_basket": {
+    "beans": 20.0,
+    "carrot": 30.0,
+    "tomato": 20.0
+  },
+  "minimum_calibration_baskets": 30,
+  "minimum_validation_baskets": 30,
+  "minimum_folds": 4,
+  "selection_rule": {
+    "basket_gain": 0.1,
+    "max_commodity_regression": 0.05,
+    "improved_folds": 4
+  },
+  "interval_methods": [
+    "relative",
+    "additive"
+  ],
+  "interval_coverage_floor": 0.75,
+  "bootstrap_draws": 2000,
+  "dataset_files": {
+    "prices.csv": "5dab52e135553b70a91081347c2e01cbda81a65e948b9595045166bfd4b31c1c",
+    "weather.csv": "077bac89978f8543c0aac207bdf2508363d2dc988bb4c4b3aa5b367ff1bf50b5"
+  },
+  "code": {
+    "research.py": "bf566d13e5aba79241ad5fd8be00c49ceb798a7f4b7da94fcbcdd58219443686",
+    "features.py": "02a7235a9057b16a6d48654fa24609cb738e7b266e3f7af335a5612e0ae648c9",
+    "train.py": "2900f38d651d16a2af746295bf275856f76f132899337a52b47c13c004569aea",
+    "config.py": "30f953ff22478f52b7d2f6e4b37eee1a30227ce2235f3412b8356f3425f78ad2",
+    "forecast.py": "fb70f2fd5459191cacaa39f510b9963f8f97fc57cae4c9c43e5ec245d3ebb28a"
+  },
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "lightgbm": "4.6.0"
+  },
+  "historical_checks": "2025 and early 2026 have been inspected previously. They are exploratory, not fresh confirmation.",
+  "promotion": "disabled: require a separately frozen study on new uninspected outcomes"
+}

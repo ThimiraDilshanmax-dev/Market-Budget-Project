@@ -1,0 +1,7 @@
+{
+  "url": "https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOTCORR,T2M,T2M_MIN,T2M_MAX,RH2M&community=AG&longitude=81.06&latitude=6.99&start=20211101&end=20260310&format=JSON&time-standard=LST",
+  "retrieved_at": "2026-10-26T03:26:17.338427+00:00",
+  "sha256": "bef51279fe6961946083efec682cc8bb554190de6efe824d421d6183d12e95b4",
+  "bytes": 133941,
+  "note": "Retrieval metadata records this acquisition; not historical publication time."
+}

@@ -1,0 +1,34 @@
+Package: vegetablesSriLanka
+Type: Package
+Title: Daily Vegetable Prices of Sri Lanka
+Version: 1.1.0
+Authors@R: c(
+   person("Thiyanga S.", "Talagala", email = "ttalagala@sjp.ac.lk", role = c("aut", "cre"), comment=c(ORCID = "0000-0002-0656-9789")),
+   person("Thisuri", "Jayarathne", role = c("aut"), comment = c(ORCID = "0009-0004-3011-4364")),
+    person("Priyanga Dilini", "Talagala", role = c("aut"), comment = c(ORCID = "0000-0003-2870-7449"))
+  )
+Description: Provides retail and wholesale vegetable price data from
+        two major market hubs in Sri Lanka, Dambulla and Pettah.
+        Includes tools for analyzing, visualizing, and comparing
+        vegetable prices across markets.
+Maintainer: Thiyanga S. Talagala <ttalagala@sjp.ac.lk>
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends: R (>= 4.1.0)
+Imports: tsibble, dplyr, naniar, visdat, ggplot2
+RoxygenNote: 7.3.3
+Suggests: knitr, rmarkdown
+NeedsCompilation: no
+Packaged: 2026-10-21 09:58:46 UTC; root
+Author: Thiyanga S. Talagala [aut, cre] (ORCID:
+        <https://orcid.org/0000-0002-0656-9789>), Thisuri Jayarathne
+        [aut] (ORCID: <https://orcid.org/0009-0004-3011-4364>),
+        Priyanga Dilini Talagala [aut] (ORCID:
+        <https://orcid.org/0000-0003-2870-7449>)
+Config/pak/sysreqs: libicu-dev libx11-dev
+Repository: https://thiyangtdata.r-universe.dev
+Date/Publication: 2026-05-05 22:17:04 UTC
+RemoteUrl: https://github.com/cran/vegetablesSriLanka
+RemoteRef: HEAD
+RemoteSha: 151a3936edbc5a1076d06a8612fc5f3c0cdeaf1d

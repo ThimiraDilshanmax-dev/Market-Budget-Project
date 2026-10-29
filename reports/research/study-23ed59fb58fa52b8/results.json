@@ -1,0 +1,1374 @@
+{
+  "status": "research_only",
+  "outcome": "completed",
+  "run_id": "study-23ed59fb58fa52b8",
+  "protocol_sha256": "23ed59fb58fa52b8664a99a47ea13ee2ca10fe9cd02247ec1f2b4f2b8370cf7d",
+  "generated_at": "2026-10-26T04:48:11.768187+00:00",
+  "protocol": {
+    "version": "research-1",
+    "status": "research_only",
+    "seed": 42,
+    "folds": [
+      {
+        "id": "2023Q1",
+        "train_start": "2022-01-01",
+        "train_end": "2022-09-30",
+        "calibration_start": "2022-10-01",
+        "calibration_end": "2022-12-31",
+        "validation_start": "2023-01-01",
+        "validation_end": "2023-03-31"
+      },
+      {
+        "id": "2023Q2",
+        "train_start": "2022-01-01",
+        "train_end": "2022-12-31",
+        "calibration_start": "2023-01-01",
+        "calibration_end": "2023-03-31",
+        "validation_start": "2023-04-01",
+        "validation_end": "2023-06-30"
+      },
+      {
+        "id": "2023Q3",
+        "train_start": "2022-01-01",
+        "train_end": "2023-03-31",
+        "calibration_start": "2023-04-01",
+        "calibration_end": "2023-06-30",
+        "validation_start": "2023-07-01",
+        "validation_end": "2023-09-30"
+      },
+      {
+        "id": "2023Q4",
+        "train_start": "2022-01-01",
+        "train_end": "2023-06-30",
+        "calibration_start": "2023-07-01",
+        "calibration_end": "2023-09-30",
+        "validation_start": "2023-10-01",
+        "validation_end": "2023-12-31"
+      },
+      {
+        "id": "2024Q1",
+        "train_start": "2022-01-01",
+        "train_end": "2023-09-30",
+        "calibration_start": "2023-10-01",
+        "calibration_end": "2023-12-31",
+        "validation_start": "2024-01-01",
+        "validation_end": "2024-03-31"
+      },
+      {
+        "id": "2024Q2",
+        "train_start": "2022-01-01",
+        "train_end": "2023-12-31",
+        "calibration_start": "2024-01-01",
+        "calibration_end": "2024-03-31",
+        "validation_start": "2024-04-01",
+        "validation_end": "2024-06-30"
+      }
+    ],
+    "parameters": {
+      "n_estimators": 180,
+      "learning_rate": 0.04,
+      "num_leaves": 9,
+      "max_depth": 4,
+      "min_child_samples": 30,
+      "reg_lambda": 2.0,
+      "verbosity": -1,
+      "random_state": 42,
+      "n_jobs": 2,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "candidate_families": [
+      "price_pooled",
+      "weather_pooled",
+      "price_individual",
+      "weather_individual"
+    ],
+    "blends": [
+      0.25,
+      0.5,
+      0.75,
+      1.0
+    ],
+    "baselines": [
+      "latest_price",
+      "mean_28d",
+      "prior_year",
+      "ewma_7d"
+    ],
+    "reference_basket": {
+      "beans": 20.0,
+      "carrot": 30.0,
+      "tomato": 20.0
+    },
+    "minimum_calibration_baskets": 30,
+    "minimum_validation_baskets": 30,
+    "minimum_folds": 4,
+    "selection_rule": {
+      "basket_gain": 0.1,
+      "max_commodity_regression": 0.05,
+      "improved_folds": 4
+    },
+    "interval_methods": [
+      "relative",
+      "additive"
+    ],
+    "interval_coverage_floor": 0.75,
+    "bootstrap_draws": 2000,
+    "dataset_files": {
+      "prices.csv": "5dab52e135553b70a91081347c2e01cbda81a65e948b9595045166bfd4b31c1c",
+      "weather.csv": "077bac89978f8543c0aac207bdf2508363d2dc988bb4c4b3aa5b367ff1bf50b5"
+    },
+    "code": {
+      "research.py": "64104594647542559054fc9266626db83ccee48c742e9fac0165dead9a9ac469",
+      "features.py": "02a7235a9057b16a6d48654fa24609cb738e7b266e3f7af335a5612e0ae648c9",
+      "train.py": "2900f38d651d16a2af746295bf275856f76f132899337a52b47c13c004569aea"
+    },
+    "packages": {
+      "numpy": "2.3.5",
+      "pandas": "2.2.3",
+      "lightgbm": "4.6.0"
+    },
+    "historical_checks": "2025 and early 2026 have been inspected previously. They are exploratory, not fresh confirmation.",
+    "promotion": "disabled: require a separately frozen study on new uninspected outcomes"
+  },
+  "folds": [
+    {
+      "id": "2023Q1",
+      "train_start": "2022-01-01",
+      "train_end": "2022-09-30",
+      "calibration_start": "2022-10-01",
+      "calibration_end": "2022-12-31",
+      "validation_start": "2023-01-01",
+      "validation_end": "2023-03-31",
+      "training_labels": 375,
+      "calibration_baskets": 56,
+      "validation_baskets": 57,
+      "status": "evaluated",
+      "volatility_thresholds": [
+        0.19922757738727156,
+        0.2529657902738897
+      ],
+      "candidate_mae": {
+        "latest_price": 1452.8859649122808,
+        "mean_28d": 2183.9600902841903,
+        "prior_year": 4176.175438596491,
+        "ewma_7d": 1677.6025030639203,
+        "price_pooled@0.25": 1434.6663857712044,
+        "price_pooled@0.5": 1441.3882190452023,
+        "price_pooled@0.75": 1487.9383248019583,
+        "price_pooled@1": 1571.4445750399116,
+        "weather_pooled@0.25": 1411.5308393779183,
+        "weather_pooled@0.5": 1392.8715287511232,
+        "weather_pooled@0.75": 1387.2729796342603,
+        "weather_pooled@1": 1402.7278303923358,
+        "price_individual@0.25": 1425.7362250837505,
+        "price_individual@0.5": 1435.472670657441,
+        "price_individual@0.75": 1463.0240024001737,
+        "price_individual@1": 1517.924445685087,
+        "weather_individual@0.25": 1361.2197867167151,
+        "weather_individual@0.5": 1286.2643978793826,
+        "weather_individual@0.75": 1213.2343161173194,
+        "weather_individual@1": 1150.2417170865208
+      }
+    },
+    {
+      "id": "2023Q2",
+      "train_start": "2022-01-01",
+      "train_end": "2022-12-31",
+      "calibration_start": "2023-01-01",
+      "calibration_end": "2023-03-31",
+      "validation_start": "2023-04-01",
+      "validation_end": "2023-06-30",
+      "training_labels": 558,
+      "calibration_baskets": 57,
+      "validation_baskets": 46,
+      "status": "evaluated",
+      "volatility_thresholds": [
+        0.18159385299451494,
+        0.2384519867504295
+      ],
+      "candidate_mae": {
+        "latest_price": 1568.75,
+        "mean_28d": 2772.2080921613497,
+        "prior_year": 5309.510869565217,
+        "ewma_7d": 2145.487695628816,
+        "price_pooled@0.25": 1462.3476879838297,
+        "price_pooled@0.5": 1374.2932941053434,
+        "price_pooled@0.75": 1361.5566783536262,
+        "price_pooled@1": 1418.8363919181172,
+        "weather_pooled@0.25": 1408.5554139260098,
+        "weather_pooled@0.5": 1346.4714499079696,
+        "weather_pooled@0.75": 1356.0162364219493,
+        "weather_pooled@1": 1439.9018969087379,
+        "price_individual@0.25": 1465.0484956911137,
+        "price_individual@0.5": 1376.9622277418046,
+        "price_individual@0.75": 1362.8400592606063,
+        "price_individual@1": 1375.5235073842607,
+        "weather_individual@0.25": 1437.0653400472113,
+        "weather_individual@0.5": 1336.8572297682629,
+        "weather_individual@0.75": 1322.2482859925303,
+        "weather_individual@1": 1367.5824635580775
+      }
+    },
+    {
+      "id": "2023Q3",
+      "train_start": "2022-01-01",
+      "train_end": "2023-03-31",
+      "calibration_start": "2023-04-01",
+      "calibration_end": "2023-06-30",
+      "validation_start": "2023-07-01",
+      "validation_end": "2023-09-30",
+      "training_labels": 741,
+      "calibration_baskets": 46,
+      "validation_baskets": 48,
+      "status": "evaluated",
+      "volatility_thresholds": [
+        0.1905179488160262,
+        0.24684653181248126
+      ],
+      "candidate_mae": {
+        "latest_price": 1446.4375,
+        "mean_28d": 2998.671762125903,
+        "prior_year": 4145.552083333333,
+        "ewma_7d": 2206.7292174560275,
+        "price_pooled@0.25": 1373.7791023998682,
+        "price_pooled@0.5": 1449.1350889952264,
+        "price_pooled@0.75": 1620.171310516588,
+        "price_pooled@1": 1803.9027203300732,
+        "weather_pooled@0.25": 1603.8947938973445,
+        "weather_pooled@0.5": 1889.39976187548,
+        "weather_pooled@0.75": 2213.8275935671186,
+        "weather_pooled@1": 2616.6040358851465,
+        "price_individual@0.25": 1449.1050718774784,
+        "price_individual@0.5": 1550.8149637467116,
+        "price_individual@0.75": 1720.3589089673194,
+        "price_individual@1": 1937.9094760380922,
+        "weather_individual@0.25": 1616.5307263887617,
+        "weather_individual@0.5": 1908.7811755314403,
+        "weather_individual@0.75": 2259.0877670140494,
+        "weather_individual@1": 2669.207300463177
+      }
+    },
+    {
+      "id": "2023Q4",
+      "train_start": "2022-01-01",
+      "train_end": "2023-06-30",
+      "calibration_start": "2023-07-01",
+      "calibration_end": "2023-09-30",
+      "validation_start": "2023-10-01",
+      "validation_end": "2023-12-31",
+      "training_labels": 891,
+      "calibration_baskets": 48,
+      "validation_baskets": 56,
+      "status": "evaluated",
+      "volatility_thresholds": [
+        0.19446636011388208,
+        0.24573719039189096
+      ],
+      "candidate_mae": {
+        "latest_price": 1907.6785714285713,
+        "mean_28d": 2809.1905284043437,
+        "prior_year": 4739.321428571428,
+        "ewma_7d": 2184.996407453675,
+        "price_pooled@0.25": 1876.5278545949284,
+        "price_pooled@0.5": 1938.9691722320676,
+        "price_pooled@0.75": 2014.8287583481017,
+        "price_pooled@1": 2124.000790292243,
+        "weather_pooled@0.25": 1948.6725845931983,
+        "weather_pooled@0.5": 2081.0775420007535,
+        "weather_pooled@0.75": 2247.0613900829076,
+        "weather_pooled@1": 2477.900268514653,
+        "price_individual@0.25": 1857.3749103550686,
+        "price_individual@0.5": 1906.7280045377029,
+        "price_individual@0.75": 1983.971794246091,
+        "price_individual@1": 2102.8407073319036,
+        "weather_individual@0.25": 1825.0820932456033,
+        "weather_individual@0.5": 1833.1658046727478,
+        "weather_individual@0.75": 1878.025694917997,
+        "weather_individual@1": 2002.3829561444275
+      }
+    },
+    {
+      "id": "2024Q1",
+      "train_start": "2022-01-01",
+      "train_end": "2023-09-30",
+      "calibration_start": "2023-10-01",
+      "calibration_end": "2023-12-31",
+      "validation_start": "2024-01-01",
+      "validation_end": "2024-03-31",
+      "training_labels": 1035,
+      "calibration_baskets": 56,
+      "validation_baskets": 54,
+      "status": "evaluated",
+      "volatility_thresholds": [
+        0.19053596317193697,
+        0.23660265874302094
+      ],
+      "candidate_mae": {
+        "latest_price": 6737.175925925926,
+        "mean_28d": 13987.073347857657,
+        "prior_year": 24282.36111111111,
+        "ewma_7d": 10662.528151511755,
+        "price_pooled@0.25": 6399.580618579534,
+        "price_pooled@0.5": 6077.343799866185,
+        "price_pooled@0.75": 5777.865946344048,
+        "price_pooled@1": 5503.459681447231,
+        "weather_pooled@0.25": 6344.253129466146,
+        "weather_pooled@0.5": 5976.602956896429,
+        "weather_pooled@0.75": 5705.392895304722,
+        "weather_pooled@1": 5674.088812510982,
+        "price_individual@0.25": 6291.59524863523,
+        "price_individual@0.5": 5945.026423135334,
+        "price_individual@0.75": 5776.595290573984,
+        "price_individual@1": 5845.320223985867,
+        "weather_individual@0.25": 6247.906966527469,
+        "weather_individual@0.5": 5887.235588479118,
+        "weather_individual@0.75": 5835.821430494423,
+        "weather_individual@1": 5978.588535646926
+      }
+    },
+    {
+      "id": "2024Q2",
+      "train_start": "2022-01-01",
+      "train_end": "2023-12-31",
+      "calibration_start": "2024-01-01",
+      "calibration_end": "2024-03-31",
+      "validation_start": "2024-04-01",
+      "validation_end": "2024-06-30",
+      "training_labels": 1203,
+      "calibration_baskets": 54,
+      "validation_baskets": 39,
+      "status": "evaluated",
+      "volatility_thresholds": [
+        0.1873130634742228,
+        0.2317910418533905
+      ],
+      "candidate_mae": {
+        "latest_price": 1929.3333333333333,
+        "mean_28d": 4852.589723101601,
+        "prior_year": 4500.948717948718,
+        "ewma_7d": 3766.5610003978095,
+        "price_pooled@0.25": 1970.5614855295687,
+        "price_pooled@0.5": 2029.3407842823565,
+        "price_pooled@0.75": 2091.382971295329,
+        "price_pooled@1": 2168.054351485805,
+        "weather_pooled@0.25": 1884.2744275251414,
+        "weather_pooled@0.5": 1858.3451721742708,
+        "weather_pooled@0.75": 1839.0562197998686,
+        "weather_pooled@1": 1819.7672674254654,
+        "price_individual@0.25": 1933.5692074260191,
+        "price_individual@0.5": 1945.0923609627084,
+        "price_individual@0.75": 1994.021138015276,
+        "price_individual@1": 2080.339727133078,
+        "weather_individual@0.25": 1888.030903207356,
+        "weather_individual@0.5": 1858.0902864166205,
+        "weather_individual@0.75": 1828.4174809069834,
+        "weather_individual@1": 1802.169016124149
+      }
+    }
+  ],
+  "weather_enabled": true,
+  "candidates": {
+    "latest_price": {
+      "basket_mae": 2567.625,
+      "basket_bias": -20.455,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 53.25333333333333,
+          "bias": 2.139333333333333
+        },
+        "carrot": {
+          "mae": 55.901500000000006,
+          "bias": 0.42383333333333295
+        },
+        "tomato": {
+          "mae": 38.44716666666667,
+          "bias": -3.7978333333333336
+        }
+      },
+      "fold_mae": [
+        1452.8859649122808,
+        1568.75,
+        1446.4375,
+        1907.6785714285713,
+        6737.175925925926,
+        1929.3333333333333
+      ]
+    },
+    "mean_28d": {
+      "basket_mae": 4992.703905145279,
+      "basket_bias": -49.81793932575281,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 72.8280718804616,
+          "bias": 3.3230635111219478
+        },
+        "carrot": {
+          "mae": 102.974124142527,
+          "bias": 4.713348514732031
+        },
+        "tomato": {
+          "mae": 81.14223751450649,
+          "bias": -12.883983249507628
+        }
+      },
+      "fold_mae": [
+        2183.9600902841903,
+        2772.2080921613497,
+        2998.671762125903,
+        2809.1905284043437,
+        13987.073347857657,
+        4852.589723101601
+      ]
+    },
+    "prior_year": {
+      "basket_mae": 8111.508333333333,
+      "basket_bias": -3247.1116666666667,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 105.86316666666666,
+          "bias": -42.71816666666666
+        },
+        "carrot": {
+          "mae": 171.3575,
+          "bias": -63.42983333333332
+        },
+        "tomato": {
+          "mae": 151.281,
+          "bias": -24.492666666666672
+        }
+      },
+      "fold_mae": [
+        4176.175438596491,
+        5309.510869565217,
+        4145.552083333333,
+        4739.321428571428,
+        24282.36111111111,
+        4500.948717948718
+      ]
+    },
+    "ewma_7d": {
+      "basket_mae": 3817.569923753379,
+      "basket_bias": 1.4253532235022188,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 60.715692239349764,
+          "bias": 3.591848456231255
+        },
+        "carrot": {
+          "mae": 80.20911021188384,
+          "bias": 3.9054098468651537
+        },
+        "tomato": {
+          "mae": 63.62645665643679,
+          "bias": -9.378695565353876
+        }
+      },
+      "fold_mae": [
+        1677.6025030639203,
+        2145.487695628816,
+        2206.7292174560275,
+        2184.996407453675,
+        10662.528151511755,
+        3766.5610003978095
+      ]
+    },
+    "price_pooled@0.25": {
+      "basket_mae": 2475.000619158908,
+      "basket_bias": -117.92774965443778,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 50.67973542947028,
+          "bias": -1.2657795133633827
+        },
+        "carrot": {
+          "mae": 54.95821309930178,
+          "bias": -0.960715797743278
+        },
+        "tomato": {
+          "mae": 38.0600677798292,
+          "bias": -3.1895342727435856
+        }
+      },
+      "fold_mae": [
+        1434.6663857712044,
+        1462.3476879838297,
+        1373.7791023998682,
+        1876.5278545949284,
+        6399.580618579534,
+        1970.5614855295687
+      ]
+    },
+    "price_pooled@0.5": {
+      "basket_mae": 2436.1274457032496,
+      "basket_bias": -215.40049930887542,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 48.857681015341875,
+          "bias": -4.670892360060102
+        },
+        "carrot": {
+          "mae": 54.49402652972199,
+          "bias": -2.345264928819893
+        },
+        "tomato": {
+          "mae": 38.62306287425692,
+          "bias": -2.581235212153835
+        }
+      },
+      "fold_mae": [
+        1441.3882190452023,
+        1374.2932941053434,
+        1449.1350889952264,
+        1938.9691722320676,
+        6077.343799866185,
+        2029.3407842823565
+      ]
+    },
+    "price_pooled@0.75": {
+      "basket_mae": 2438.7047402445496,
+      "basket_bias": -312.8732489633135,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 47.92294344593754,
+          "bias": -8.076005206756822
+        },
+        "carrot": {
+          "mae": 55.02550588115612,
+          "bias": -3.729814059896503
+        },
+        "tomato": {
+          "mae": 40.19987176714522,
+          "bias": -1.9729361515640873
+        }
+      },
+      "fold_mae": [
+        1487.9383248019583,
+        1361.5566783536262,
+        1620.171310516588,
+        2014.8287583481017,
+        5777.865946344048,
+        2091.382971295329
+      ]
+    },
+    "price_pooled@1": {
+      "basket_mae": 2473.703773812715,
+      "basket_bias": -410.34599861775115,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 47.50578252926298,
+          "bias": -11.48111805345354
+        },
+        "carrot": {
+          "mae": 56.16092276612127,
+          "bias": -5.114363190973119
+        },
+        "tomato": {
+          "mae": 42.33727734427013,
+          "bias": -1.3646370909743413
+        }
+      },
+      "fold_mae": [
+        1571.4445750399116,
+        1418.8363919181172,
+        1803.9027203300732,
+        2124.000790292243,
+        5503.459681447231,
+        2168.054351485805
+      ]
+    },
+    "weather_pooled@0.25": {
+      "basket_mae": 2491.465977980273,
+      "basket_bias": -74.34148239154524,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 50.764984416849664,
+          "bias": -0.17999526105372127
+        },
+        "carrot": {
+          "mae": 55.491283331140075,
+          "bias": 0.04304309272703525
+        },
+        "tomato": {
+          "mae": 38.324252879161904,
+          "bias": -3.6016434976140923
+        }
+      },
+      "fold_mae": [
+        1411.5308393779183,
+        1408.5554139260098,
+        1603.8947938973445,
+        1948.6725845931983,
+        6344.253129466146,
+        1884.2744275251414
+      ]
+    },
+    "weather_pooled@0.5": {
+      "basket_mae": 2479.249720479499,
+      "basket_bias": -128.22796478309067,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 49.09677952727851,
+          "bias": -2.4993238554407795
+        },
+        "carrot": {
+          "mae": 55.396477443883356,
+          "bias": -0.33774714787927146
+        },
+        "tomato": {
+          "mae": 39.591776007659625,
+          "bias": -3.4054536618948523
+        }
+      },
+      "fold_mae": [
+        1392.8715287511232,
+        1346.4714499079696,
+        1889.39976187548,
+        2081.0775420007535,
+        5976.602956896429,
+        1858.3451721742708
+      ]
+    },
+    "weather_pooled@0.75": {
+      "basket_mae": 2511.216259896923,
+      "basket_bias": -182.1144471746362,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 48.45469178162063,
+          "bias": -4.818652449827838
+        },
+        "carrot": {
+          "mae": 56.07536176315914,
+          "bias": -0.7185373884855759
+        },
+        "tomato": {
+          "mae": 41.99047442243221,
+          "bias": -3.2092638261756155
+        }
+      },
+      "fold_mae": [
+        1387.2729796342603,
+        1356.0162364219493,
+        2213.8275935671186,
+        2247.0613900829076,
+        5705.392895304722,
+        1839.0562197998686
+      ]
+    },
+    "weather_pooled@1": {
+      "basket_mae": 2626.4070055155294,
+      "basket_bias": -236.00092956618144,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 49.05763707063931,
+          "bias": -7.137981044214892
+        },
+        "carrot": {
+          "mae": 57.326577270778934,
+          "bias": -1.099327629091872
+        },
+        "tomato": {
+          "mae": 44.90199095095974,
+          "bias": -3.013073990456372
+        }
+      },
+      "fold_mae": [
+        1402.7278303923358,
+        1439.9018969087379,
+        2616.6040358851465,
+        2477.900268514653,
+        5674.088812510982,
+        1819.7672674254654
+      ]
+    },
+    "price_individual@0.25": {
+      "basket_mae": 2457.948588591616,
+      "basket_bias": -128.2445866036953,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 50.51910969811172,
+          "bias": -0.24646673609542935
+        },
+        "carrot": {
+          "mae": 55.04811024700254,
+          "bias": -2.0610231043260105
+        },
+        "tomato": {
+          "mae": 37.059233999477804,
+          "bias": -3.074227937600321
+        }
+      },
+      "fold_mae": [
+        1425.7362250837505,
+        1465.0484956911137,
+        1449.1050718774784,
+        1857.3749103550686,
+        6291.59524863523,
+        1933.5692074260191
+      ]
+    },
+    "price_individual@0.5": {
+      "basket_mae": 2410.8937338146807,
+      "basket_bias": -236.03417320739052,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 49.32161556948564,
+          "bias": -2.632266805524192
+        },
+        "carrot": {
+          "mae": 54.60089890949222,
+          "bias": -4.5458795419853555
+        },
+        "tomato": {
+          "mae": 37.14459772188144,
+          "bias": -2.350622541867312
+        }
+      },
+      "fold_mae": [
+        1435.472670657441,
+        1376.9622277418046,
+        1550.8149637467116,
+        1906.7280045377029,
+        5945.026423135334,
+        1945.0923609627084
+      ]
+    },
+    "price_individual@0.75": {
+      "basket_mae": 2431.5520968153364,
+      "basket_bias": -343.82375981108584,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 49.75313482222971,
+          "bias": -5.018066874952955
+        },
+        "carrot": {
+          "mae": 54.90601063508407,
+          "bias": -7.030735979644696
+        },
+        "tomato": {
+          "mae": 38.876509264636894,
+          "bias": -1.6270171461342944
+        }
+      },
+      "fold_mae": [
+        1463.0240024001737,
+        1362.8400592606063,
+        1720.3589089673194,
+        1983.971794246091,
+        5776.595290573984,
+        1994.021138015276
+      ]
+    },
+    "price_individual@1": {
+      "basket_mae": 2524.516835525226,
+      "basket_bias": -451.6133464147813,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 52.0227437360925,
+          "bias": -7.403866944381716
+        },
+        "carrot": {
+          "mae": 55.67879356617673,
+          "bias": -9.515592417304042
+        },
+        "tomato": {
+          "mae": 41.72272083537012,
+          "bias": -0.9034117504012844
+        }
+      },
+      "fold_mae": [
+        1517.924445685087,
+        1375.5235073842607,
+        1937.9094760380922,
+        2102.8407073319036,
+        5845.320223985867,
+        2080.339727133078
+      ]
+    },
+    "weather_individual@0.25": {
+      "basket_mae": 2448.3759566366966,
+      "basket_bias": -110.3999297803666,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 50.25804937589458,
+          "bias": 0.9567307944359376
+        },
+        "carrot": {
+          "mae": 54.389028991510166,
+          "bias": -1.8877849102411377
+        },
+        "tomato": {
+          "mae": 37.54711881185691,
+          "bias": -3.6450499180925573
+        }
+      },
+      "fold_mae": [
+        1361.2197867167151,
+        1437.0653400472113,
+        1616.5307263887617,
+        1825.0820932456033,
+        6247.906966527469,
+        1888.030903207356
+      ]
+    },
+    "weather_individual@0.5": {
+      "basket_mae": 2398.225092279228,
+      "basket_bias": -200.34485956073317,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 49.335483346774296,
+          "bias": -0.22587174446145583
+        },
+        "carrot": {
+          "mae": 53.27161501098381,
+          "bias": -4.199403153815614
+        },
+        "tomato": {
+          "mae": 38.35056881136384,
+          "bias": -3.4922665028517836
+        }
+      },
+      "fold_mae": [
+        1286.2643978793826,
+        1336.8572297682629,
+        1908.7811755314403,
+        1833.1658046727478,
+        5887.235588479118,
+        1858.0902864166205
+      ]
+    },
+    "weather_individual@0.75": {
+      "basket_mae": 2433.4202263616567,
+      "basket_bias": -290.2897893410998,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 51.147430851477225,
+          "bias": -1.4084742833588415
+        },
+        "carrot": {
+          "mae": 52.71082354619728,
+          "bias": -6.5110213973900875
+        },
+        "tomato": {
+          "mae": 40.737284850970696,
+          "bias": -3.339483087611012
+        }
+      },
+      "fold_mae": [
+        1213.2343161173194,
+        1322.2482859925303,
+        2259.0877670140494,
+        1878.025694917997,
+        5835.821430494423,
+        1828.4174809069834
+      ]
+    },
+    "weather_individual@1": {
+      "basket_mae": 2539.5211323923313,
+      "basket_bias": -380.23471912146636,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 55.41594318316374,
+          "bias": -2.5910768222562397
+        },
+        "carrot": {
+          "mae": 52.67171024097386,
+          "bias": -8.822639640964562
+        },
+        "tomato": {
+          "mae": 44.0641940740404,
+          "bias": -3.1866996723702337
+        }
+      },
+      "fold_mae": [
+        1150.2417170865208,
+        1367.5824635580775,
+        2669.207300463177,
+        2002.3829561444275,
+        5978.588535646926,
+        1802.169016124149
+      ]
+    }
+  },
+  "selection": {
+    "baseline": "latest_price",
+    "selected": "latest_price",
+    "qualified": [],
+    "guards": {
+      "price_pooled@0.25": {
+        "gain": 0.03607395193655294,
+        "commodity_guard": true,
+        "improved_folds": 5,
+        "qualified": false
+      },
+      "price_pooled@0.5": {
+        "gain": 0.051213691367216985,
+        "commodity_guard": true,
+        "improved_folds": 3,
+        "qualified": false
+      },
+      "price_pooled@0.75": {
+        "gain": 0.05020992541958047,
+        "commodity_guard": true,
+        "improved_folds": 2,
+        "qualified": false
+      },
+      "price_pooled@1": {
+        "gain": 0.036579027773637085,
+        "commodity_guard": false,
+        "improved_folds": 2,
+        "qualified": false
+      },
+      "weather_pooled@0.25": {
+        "gain": 0.029661271416085766,
+        "commodity_guard": true,
+        "improved_folds": 4,
+        "qualified": false
+      },
+      "weather_pooled@0.5": {
+        "gain": 0.034419075807604727,
+        "commodity_guard": true,
+        "improved_folds": 4,
+        "qualified": false
+      },
+      "weather_pooled@0.75": {
+        "gain": 0.02196922841266813,
+        "commodity_guard": false,
+        "improved_folds": 4,
+        "qualified": false
+      },
+      "weather_pooled@1": {
+        "gain": -0.022893532161250008,
+        "commodity_guard": false,
+        "improved_folds": 4,
+        "qualified": false
+      },
+      "price_individual@0.25": {
+        "gain": 0.04271512055241089,
+        "commodity_guard": true,
+        "improved_folds": 4,
+        "qualified": false
+      },
+      "price_individual@0.5": {
+        "gain": 0.061041338273820855,
+        "commodity_guard": true,
+        "improved_folds": 4,
+        "qualified": false
+      },
+      "price_individual@0.75": {
+        "gain": 0.052995629495998675,
+        "commodity_guard": true,
+        "improved_folds": 2,
+        "qualified": false
+      },
+      "price_individual@1": {
+        "gain": 0.016789120091436294,
+        "commodity_guard": false,
+        "improved_folds": 2,
+        "qualified": false
+      },
+      "weather_individual@0.25": {
+        "gain": 0.0464433253934291,
+        "commodity_guard": true,
+        "improved_folds": 5,
+        "qualified": false
+      },
+      "weather_individual@0.5": {
+        "gain": 0.0659753304009627,
+        "commodity_guard": true,
+        "improved_folds": 5,
+        "qualified": false
+      },
+      "weather_individual@0.75": {
+        "gain": 0.05226805847362581,
+        "commodity_guard": false,
+        "improved_folds": 5,
+        "qualified": false
+      },
+      "weather_individual@1": {
+        "gain": 0.010945472024796676,
+        "commodity_guard": false,
+        "improved_folds": 4,
+        "qualified": false
+      }
+    }
+  },
+  "interval_methods": {
+    "relative": {
+      "basket_mae": 2567.625,
+      "basket_bias": -20.455,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 53.25333333333333,
+          "bias": 2.139333333333333
+        },
+        "carrot": {
+          "mae": 55.901500000000006,
+          "bias": 0.42383333333333295
+        },
+        "tomato": {
+          "mae": 38.44716666666667,
+          "bias": -3.7978333333333336
+        }
+      },
+      "coverage": 0.7166666666666667,
+      "mean_width": 7627.162929435513,
+      "interval_score": 13710.780573411368
+    },
+    "additive": {
+      "basket_mae": 2567.625,
+      "basket_bias": -20.455,
+      "n": 300,
+      "commodities": {
+        "beans": {
+          "mae": 53.25333333333333,
+          "bias": 2.139333333333333
+        },
+        "carrot": {
+          "mae": 55.901500000000006,
+          "bias": 0.42383333333333295
+        },
+        "tomato": {
+          "mae": 38.44716666666667,
+          "bias": -3.7978333333333336
+        }
+      },
+      "coverage": 0.6766666666666666,
+      "mean_width": 6996.831666666667,
+      "interval_score": 17541.531666666666
+    }
+  },
+  "selected_interval_method": "relative",
+  "interval_guard_passed": false,
+  "confidence_95": {
+    "draws": 2000,
+    "block_calendar_days": 14,
+    "blocks": 38,
+    "seed": 42,
+    "basket_mae": [
+      1788.2926311804392,
+      3517.5127203182365
+    ],
+    "coverage": [
+      0.6308686449971487,
+      0.7974802757066065
+    ],
+    "gain": [
+      0.0,
+      0.0
+    ]
+  },
+  "segments": {
+    "volatility_low": {
+      "basket_mae": 1827.7643678160919,
+      "basket_bias": 344.61494252873564,
+      "n": 87,
+      "commodities": {
+        "beans": {
+          "mae": 48.17413793103448,
+          "bias": 8.570689655172414
+        },
+        "carrot": {
+          "mae": 39.72011494252874,
+          "bias": 3.404022988505747
+        },
+        "tomato": {
+          "mae": 35.65632183908046,
+          "bias": 3.554022988505747
+        }
+      },
+      "coverage": 0.7816091954022989,
+      "mean_width": 7361.014240706169,
+      "interval_score": 9789.262566549922
+    },
+    "volatility_medium": {
+      "basket_mae": 2944.8277777777776,
+      "basket_bias": -991.0388888888889,
+      "n": 90,
+      "commodities": {
+        "beans": {
+          "mae": 55.02444444444444,
+          "bias": 0.6855555555555555
+        },
+        "carrot": {
+          "mae": 68.7061111111111,
+          "bias": -30.232777777777777
+        },
+        "tomato": {
+          "mae": 35.00833333333333,
+          "bias": -4.888333333333333
+        }
+      },
+      "coverage": 0.6444444444444445,
+      "mean_width": 6979.123144157562,
+      "interval_score": 15249.876671814918
+    },
+    "volatility_high": {
+      "basket_mae": 2814.939024390244,
+      "basket_bias": 431.5081300813008,
+      "n": 123,
+      "commodities": {
+        "beans": {
+          "mae": 55.55,
+          "bias": -1.3459349593495937
+        },
+        "carrot": {
+          "mae": 57.97764227642276,
+          "bias": 20.74756097560976
+        },
+        "tomato": {
+          "mae": 42.93739837398373,
+          "bias": -8.200000000000001
+        }
+      },
+      "coverage": 0.7235772357723578,
+      "mean_width": 8289.589893618184,
+      "interval_score": 15358.369335530286
+    },
+    "quarter_2023Q1": {
+      "basket_mae": 1452.8859649122808,
+      "basket_bias": 500.00877192982455,
+      "n": 57,
+      "commodities": {
+        "beans": {
+          "mae": 50.75263157894736,
+          "bias": 20.14736842105263
+        },
+        "carrot": {
+          "mae": 20.70263157894737,
+          "bias": 4.434210526315789
+        },
+        "tomato": {
+          "mae": 23.703508771929823,
+          "bias": -1.7982456140350866
+        }
+      },
+      "coverage": 0.7368421052631579,
+      "mean_width": 4355.933148911982,
+      "interval_score": 6301.782826621299
+    },
+    "quarter_2023Q2": {
+      "basket_mae": 1568.75,
+      "basket_bias": -810.4891304347826,
+      "n": 46,
+      "commodities": {
+        "beans": {
+          "mae": 46.8554347826087,
+          "bias": -15.485869565217392
+        },
+        "carrot": {
+          "mae": 24.09021739130435,
+          "bias": -15.290217391304349
+        },
+        "tomato": {
+          "mae": 30.625,
+          "bias": -2.1032608695652173
+        }
+      },
+      "coverage": 0.8260869565217391,
+      "mean_width": 6169.7541568174465,
+      "interval_score": 8427.486119465657
+    },
+    "quarter_2023Q3": {
+      "basket_mae": 1446.4375,
+      "basket_bias": 627.0625,
+      "n": 48,
+      "commodities": {
+        "beans": {
+          "mae": 35.046875,
+          "bias": 1.015625
+        },
+        "carrot": {
+          "mae": 39.010416666666664,
+          "bias": 12.03125
+        },
+        "tomato": {
+          "mae": 30.840625,
+          "bias": 12.290624999999999
+        }
+      },
+      "coverage": 0.6875,
+      "mean_width": 8280.183256910637,
+      "interval_score": 10688.749727379962
+    },
+    "quarter_2023Q4": {
+      "basket_mae": 1907.6785714285713,
+      "basket_bias": -748.1785714285714,
+      "n": 56,
+      "commodities": {
+        "beans": {
+          "mae": 50.888392857142854,
+          "bias": -1.78125
+        },
+        "carrot": {
+          "mae": 33.57142857142857,
+          "bias": -10.678571428571429
+        },
+        "tomato": {
+          "mae": 38.231249999999996,
+          "bias": -19.60982142857143
+        }
+      },
+      "coverage": 0.7678571428571429,
+      "mean_width": 5712.483744577823,
+      "interval_score": 8462.625033682943
+    },
+    "quarter_2024Q1": {
+      "basket_mae": 6737.175925925926,
+      "basket_bias": 1220.601851851852,
+      "n": 54,
+      "commodities": {
+        "beans": {
+          "mae": 83.97685185185185,
+          "bias": 13.828703703703704
+        },
+        "carrot": {
+          "mae": 172.3564814814815,
+          "bias": 20.171296296296298
+        },
+        "tomato": {
+          "mae": 67.55555555555556,
+          "bias": 16.944444444444443
+        }
+      },
+      "coverage": 0.4444444444444444,
+      "mean_width": 13300.86937906794,
+      "interval_score": 37418.57890986352
+    },
+    "quarter_2024Q2": {
+      "basket_mae": 1929.3333333333333,
+      "basket_bias": -1319.6923076923076,
+      "n": 39,
+      "commodities": {
+        "beans": {
+          "mae": 47.717948717948715,
+          "bias": -12.564102564102564
+        },
+        "carrot": {
+          "mae": 36.47435897435897,
+          "bias": -12.58974358974359
+        },
+        "tomato": {
+          "mae": 38.58974358974359,
+          "bias": -34.53589743589744
+        }
+      },
+      "coverage": 0.8974358974358975,
+      "mean_width": 8216.85040080336,
+      "interval_score": 9199.947166088812
+    }
+  },
+  "historical_checks": {
+    "2025": {
+      "evidence": "previously_inspected_exploratory",
+      "basket_mae": 2674.0522388059703,
+      "basket_bias": -52.11194029850746,
+      "n": 201,
+      "commodities": {
+        "beans": {
+          "mae": 78.63557213930348,
+          "bias": -12.34452736318408
+        },
+        "carrot": {
+          "mae": 62.13009950248756,
+          "bias": 8.76044776119403
+        },
+        "tomato": {
+          "mae": 36.615174129353235,
+          "bias": -3.4017412935323383
+        }
+      },
+      "coverage": 0.7810945273631841,
+      "mean_width": 8855.585281952704,
+      "interval_score": 12106.761968795021,
+      "baseline": {
+        "basket_mae": 2674.0522388059703,
+        "basket_bias": -52.11194029850746,
+        "n": 201,
+        "commodities": {
+          "beans": {
+            "mae": 78.63557213930348,
+            "bias": -12.34452736318408
+          },
+          "carrot": {
+            "mae": 62.13009950248756,
+            "bias": 8.76044776119403
+          },
+          "tomato": {
+            "mae": 36.615174129353235,
+            "bias": -3.4017412935323383
+          }
+        }
+      }
+    },
+    "early_2026": {
+      "evidence": "previously_inspected_exploratory",
+      "basket_mae": 2227.451219512195,
+      "basket_bias": 1018.9634146341464,
+      "n": 41,
+      "commodities": {
+        "beans": {
+          "mae": 61.98780487804878,
+          "bias": 20.817073170731707
+        },
+        "carrot": {
+          "mae": 39.44024390243902,
+          "bias": 7.9573170731707314
+        },
+        "tomato": {
+          "mae": 50.02439024390244,
+          "bias": 18.195121951219512
+        }
+      },
+      "coverage": 0.8292682926829268,
+      "mean_width": 7883.663078036429,
+      "interval_score": 10876.665548831383,
+      "baseline": {
+        "basket_mae": 2227.451219512195,
+        "basket_bias": 1018.9634146341464,
+        "n": 41,
+        "commodities": {
+          "beans": {
+            "mae": 61.98780487804878,
+            "bias": 20.817073170731707
+          },
+          "carrot": {
+            "mae": 39.44024390243902,
+            "bias": 7.9573170731707314
+          },
+          "tomato": {
+            "mae": 50.02439024390244,
+            "bias": 18.195121951219512
+          }
+        }
+      }
+    }
+  },
+  "promotion": "disabled_pending_new_uninspected_outcomes",
+  "notes": [
+    "Development folds choose candidates and interval method; their scores are selection evidence.",
+    "Overlapping targets are dependent. Block intervals describe uncertainty, not guaranteed coverage.",
+    "Buyer-facing approved forecast and original historical evaluation remain unchanged."
+  ]
+}

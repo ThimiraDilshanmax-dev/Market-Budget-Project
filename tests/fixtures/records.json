@@ -1,0 +1,2472 @@
+[
+  {
+    "name": "complete-current",
+    "valid": true,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "complete-legacy",
+    "valid": true,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.0",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb-legacy-preserved"
+      }
+    }
+  },
+  {
+    "name": "missing-exported_at",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "missing-disclaimer",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "missing-currency",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "missing-market",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "missing-nominal_coverage",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "missing-price_ages",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "missing-calibration_n",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "missing-method",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "missing-weather_status",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "invalid-saved_at-2026-02-30T10:00:00Z",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-02-30T10:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "invalid-saved_at-2026-10-26T05:00:00",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "invalid-name- ",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": " ",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "wrong-currency",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "USD",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "wrong-market",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Pettah",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "wrong-nominal_coverage",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.9,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "wrong-calculation_version",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "unknown",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "wrong-price_type",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Retail",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "wrong-calibration_n",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": true,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "line-latest_price",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "line-line_total",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "line-change_percent",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": true,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "line-last_price_date",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-02-30"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "line-price_interval",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T05:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              9999,
+              10000
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "invalid-time-2026-10-26T24:00:00Z",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T24:00:00Z",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  },
+  {
+    "name": "invalid-time-2026-10-26T10:00:00+00:99",
+    "valid": false,
+    "record": {
+      "id": "fixture-1",
+      "name": "Portable test plan",
+      "saved_at": "2026-10-26T10:00:00+00:99",
+      "contract": {
+        "schema_version": "1.1",
+        "calculation_version": "decimal_half_up_v1",
+        "status": "historical_replay",
+        "issue_date": "2026-03-10",
+        "target_start": "2026-03-11",
+        "target_end": "2026-03-17",
+        "exported_at": "2026-10-26T04:52:30.237165+00:00",
+        "issue_timing": "Historical replay after assumed report availability; original publication times unknown.",
+        "market": "Dambulla",
+        "price_type": "Wholesale benchmark",
+        "currency": "LKR",
+        "quantities": {
+          "beans": 20.0,
+          "carrot": 30.0,
+          "tomato": 20.0
+        },
+        "budget": 20000,
+        "estimate": 14750.0,
+        "interval": [
+          12608.52,
+          18434.27
+        ],
+        "nominal_coverage": 0.8,
+        "calibration_n": 105,
+        "lines": [
+          {
+            "commodity": "beans",
+            "name": "Beans",
+            "kg": 20.0,
+            "price_per_kg": 290.0,
+            "latest_price": 290.0,
+            "change_percent": 0.0,
+            "line_total": 5800.0,
+            "price_interval": [
+              219.24,
+              397.11
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "carrot",
+            "name": "Carrots",
+            "kg": 30.0,
+            "price_per_kg": 225.0,
+            "latest_price": 225.0,
+            "change_percent": 0.0,
+            "line_total": 6750.0,
+            "price_interval": [
+              177.09,
+              299.12
+            ],
+            "last_price_date": "2026-03-10"
+          },
+          {
+            "commodity": "tomato",
+            "name": "Tomatoes",
+            "kg": 20.0,
+            "price_per_kg": 110.0,
+            "latest_price": 110.0,
+            "change_percent": 0.0,
+            "line_total": 2200.0,
+            "price_interval": [
+              82.95,
+              160.37
+            ],
+            "last_price_date": "2026-03-10"
+          }
+        ],
+        "model_version": "mb1.1-525ac387d5",
+        "method": "latest_price",
+        "budget_difference": 5250.0,
+        "upper_budget_difference": 1565.73,
+        "price_ages": {
+          "beans": 0,
+          "carrot": 0,
+          "tomato": 0
+        },
+        "weather_status": "Not used by selected method",
+        "disclaimer": "Weekly average reference cost, excluding delivery and supplier terms. Nominal 80% range is empirical, not a guarantee.",
+        "source_hash": "a20ff341a5d1e853a282befe0dd05f1455396b547d11b2376152b37f698eddf6",
+        "contract_id": "mb3-f293039c210490fe"
+      }
+    }
+  }
+]

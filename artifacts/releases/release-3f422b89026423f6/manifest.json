@@ -1,0 +1,11 @@
+{
+  "release_id": "release-3f422b89026423f6",
+  "sealed_at": "2026-10-26T04:39:40.055288+00:00",
+  "model_version": "mb1.1-525ac387d5",
+  "files": {
+    "evaluation.json": "4ec3b52dd4dd0e9f09d73eb0862e60cc65b6998c73007ec39a78f76ccef896fa",
+    "corrections.json": "5dc9cb303de529a42c4614708284fc90ed7d57e54c4a8348f680ad0c57b094c7",
+    "model_card.json": "1b058aeabede0c867d218fff505811eea45e6839961e386a93b947b6d2d52749",
+    "snapshot.json": "3f422b89026423f6c5f1c6e007f76a9e8de69c235a6d4ad21980c020dbbcab5b"
+  }
+}

@@ -1,0 +1,968 @@
+{
+  "generated_at": "2026-10-26T04:07:56.077645+00:00",
+  "model": {
+    "version": "mb1.1-525ac387d5",
+    "artifact_hash": "525ac387d50266a3ba90c455a1de6280d597241b947d665d313b79164e8ee301",
+    "provenance": {
+      "application_version": "1.1.0",
+      "splits": {
+        "train": [
+          "2022-01-01",
+          "2023-12-31"
+        ],
+        "tuning": [
+          "2024-01-01",
+          "2024-06-30"
+        ],
+        "calibration": [
+          "2024-07-01",
+          "2024-12-31"
+        ],
+        "test_2025": [
+          "2025-01-01",
+          "2025-12-31"
+        ],
+        "later_2026": [
+          "2026-01-01",
+          "2026-03-10"
+        ]
+      },
+      "price_features": [
+        "commodity_id",
+        "latest",
+        "age",
+        "lag7",
+        "lag14",
+        "lag28",
+        "mean7",
+        "mean14",
+        "mean28",
+        "count7",
+        "count14",
+        "count28",
+        "vol7",
+        "vol28",
+        "momentum7",
+        "momentum28",
+        "annual_sin",
+        "annual_cos",
+        "weekday"
+      ],
+      "weather_features": [
+        "wx_nuwara_eliya_prectotcorr_7",
+        "wx_nuwara_eliya_prectotcorr_14",
+        "wx_nuwara_eliya_t2m_7",
+        "wx_nuwara_eliya_t2m_14",
+        "wx_nuwara_eliya_t2m_min_7",
+        "wx_nuwara_eliya_t2m_min_14",
+        "wx_nuwara_eliya_t2m_max_7",
+        "wx_nuwara_eliya_t2m_max_14",
+        "wx_nuwara_eliya_rh2m_7",
+        "wx_nuwara_eliya_rh2m_14",
+        "wx_badulla_prectotcorr_7",
+        "wx_badulla_prectotcorr_14",
+        "wx_badulla_t2m_7",
+        "wx_badulla_t2m_14",
+        "wx_badulla_t2m_min_7",
+        "wx_badulla_t2m_min_14",
+        "wx_badulla_t2m_max_7",
+        "wx_badulla_t2m_max_14",
+        "wx_badulla_rh2m_7",
+        "wx_badulla_rh2m_14",
+        "wx_kandy_matale_prectotcorr_7",
+        "wx_kandy_matale_prectotcorr_14",
+        "wx_kandy_matale_t2m_7",
+        "wx_kandy_matale_t2m_14",
+        "wx_kandy_matale_t2m_min_7",
+        "wx_kandy_matale_t2m_min_14",
+        "wx_kandy_matale_t2m_max_7",
+        "wx_kandy_matale_t2m_max_14",
+        "wx_kandy_matale_rh2m_7",
+        "wx_kandy_matale_rh2m_14"
+      ],
+      "packages": {
+        "lightgbm": "4.6.0",
+        "numpy": "2.3.5",
+        "pandas": "2.2.3"
+      },
+      "code_sha256": {
+        "train.py": "fe509e96652ec351a3e23f4092567b41925e795fe0165202dcb5adee285c5744",
+        "features.py": "02a7235a9057b16a6d48654fa24609cb738e7b266e3f7af335a5612e0ae648c9",
+        "forecast.py": "2bdb26c6d199f58e966c73f395b639f884243980668452115bef59a8721614b8",
+        "config.py": "30f953ff22478f52b7d2f6e4b37eee1a30227ce2235f3412b8356f3425f78ad2"
+      }
+    },
+    "selected": "latest_price",
+    "train_end": "2023-12-31",
+    "selection_end": "2024-06-30",
+    "calibration_end": "2024-12-31",
+    "weather_status": "Not used by selected method",
+    "parameters": {
+      "n_estimators": 180,
+      "learning_rate": 0.04,
+      "num_leaves": 9,
+      "max_depth": 4,
+      "min_child_samples": 30,
+      "reg_lambda": 2.0,
+      "verbosity": -1,
+      "random_state": 42,
+      "n_jobs": 2,
+      "deterministic": true,
+      "force_col_wise": true
+    },
+    "features": [],
+    "selection": {
+      "best_baseline": "latest_price",
+      "best_learned": "weather_pooled",
+      "learned_improvement": 0.16962408479891156,
+      "per_commodity_guard_passed": false,
+      "selected": "latest_price",
+      "rule": "Deploy learned model only if tuning basket MAE improves by at least 10% and no commodity MAE regresses by more than 5%. Otherwise use strongest tuning baseline."
+    },
+    "released_for": "Private research replay; operational deployment requires source-rights and freshness review"
+  },
+  "splits": {
+    "train": {
+      "start": "2022-01-01",
+      "end": "2023-12-31",
+      "labelled_rows": 1205,
+      "complete_baskets": 401
+    },
+    "tuning": {
+      "start": "2024-01-01",
+      "end": "2024-06-30",
+      "labelled_rows": 291,
+      "complete_baskets": 97
+    },
+    "calibration": {
+      "start": "2024-07-01",
+      "end": "2024-12-31",
+      "labelled_rows": 315,
+      "complete_baskets": 105
+    },
+    "test_2025": {
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "labelled_rows": 607,
+      "complete_baskets": 201
+    },
+    "later_2026": {
+      "start": "2026-01-01",
+      "end": "2026-03-10",
+      "labelled_rows": 123,
+      "complete_baskets": 41
+    }
+  },
+  "metrics": {
+    "tuning": {
+      "latest_price": {
+        "basket_mae": 4559.551546391753,
+        "basket_bias": 180.61340206185568,
+        "complete_baskets": 97,
+        "commodities": {
+          "beans": {
+            "mae": 66.55412371134021,
+            "bias": 3.13659793814433,
+            "n": 97
+          },
+          "carrot": {
+            "mae": 111.51804123711341,
+            "bias": 6.373711340206185,
+            "n": 97
+          },
+          "tomato": {
+            "mae": 53.90979381443299,
+            "bias": -3.666494845360825,
+            "n": 97
+          }
+        }
+      },
+      "mean_28d": {
+        "basket_mae": 10036.831926055476,
+        "basket_bias": 1030.06299091071,
+        "complete_baskets": 97,
+        "commodities": {
+          "beans": {
+            "mae": 109.03098231411046,
+            "bias": 8.753760521348934,
+            "n": 97
+          },
+          "carrot": {
+            "mae": 219.33940068124866,
+            "bias": 26.158002864389907,
+            "n": 97
+          },
+          "tomato": {
+            "mae": 133.46219855521548,
+            "bias": 3.5123847276016864,
+            "n": 97
+          }
+        }
+      },
+      "prior_year": {
+        "basket_mae": 15477.829896907217,
+        "basket_bias": -13638.458762886597,
+        "complete_baskets": 97,
+        "commodities": {
+          "beans": {
+            "mae": 129.04742268041238,
+            "bias": -108.62164948453608,
+            "n": 97
+          },
+          "carrot": {
+            "mae": 325.410824742268,
+            "bias": -288.4726804123711,
+            "n": 97
+          },
+          "tomato": {
+            "mae": 200.2438144329897,
+            "bias": -140.59226804123713,
+            "n": 97
+          }
+        }
+      },
+      "price_pooled": {
+        "basket_mae": 4032.992060722936,
+        "basket_bias": -1099.7780149439384,
+        "complete_baskets": 97,
+        "commodities": {
+          "beans": {
+            "mae": 59.0289476171338,
+            "bias": -17.545000529078138,
+            "n": 97
+          },
+          "carrot": {
+            "mae": 107.78551404132028,
+            "bias": -11.785632593663882,
+            "n": 97
+          },
+          "tomato": {
+            "mae": 55.72800358526316,
+            "bias": -19.76545132762295,
+            "n": 97
+          }
+        },
+        "pinball_mean": 26.433822135434028,
+        "raw_quantile_coverage": 0.6391752577319587
+      },
+      "weather_pooled": {
+        "basket_mae": 3786.14178824159,
+        "basket_bias": -1317.5200555619933,
+        "complete_baskets": 97,
+        "commodities": {
+          "beans": {
+            "mae": 61.35468641520009,
+            "bias": -17.13645387186857,
+            "n": 97
+          },
+          "carrot": {
+            "mae": 104.8470488441286,
+            "bias": -16.42432676986941,
+            "n": 97
+          },
+          "tomato": {
+            "mae": 57.97655423260328,
+            "bias": -24.103058751426985,
+            "n": 97
+          }
+        },
+        "pinball_mean": 25.48511024538518,
+        "raw_quantile_coverage": 0.6769759450171822
+      },
+      "price_individual": {
+        "basket_mae": 4085.8052918656635,
+        "basket_bias": -1488.402349674155,
+        "complete_baskets": 97,
+        "commodities": {
+          "beans": {
+            "mae": 64.63981941589668,
+            "bias": -21.443912586810427,
+            "n": 97
+          },
+          "carrot": {
+            "mae": 102.41061026562237,
+            "bias": -20.43603366056936,
+            "n": 97
+          },
+          "tomato": {
+            "mae": 49.279912171414466,
+            "bias": -22.322154406043275,
+            "n": 97
+          }
+        },
+        "pinball_mean": 26.65730154474305,
+        "raw_quantile_coverage": 0.5670103092783505
+      },
+      "weather_individual": {
+        "basket_mae": 3926.650389697374,
+        "basket_bias": -1437.5637656205706,
+        "complete_baskets": 97,
+        "commodities": {
+          "beans": {
+            "mae": 65.54452285134212,
+            "bias": -31.666420923904493,
+            "n": 97
+          },
+          "carrot": {
+            "mae": 103.66912317327606,
+            "bias": -10.821979870436282,
+            "n": 97
+          },
+          "tomato": {
+            "mae": 48.94968066297629,
+            "bias": -23.978797551469622,
+            "n": 97
+          }
+        },
+        "pinball_mean": 26.424262737095994,
+        "raw_quantile_coverage": 0.570446735395189
+      }
+    },
+    "test_2025": {
+      "latest_price": {
+        "basket_mae": 2674.0522388059703,
+        "basket_bias": -52.11194029850746,
+        "complete_baskets": 201,
+        "commodities": {
+          "beans": {
+            "mae": 78.59975369458128,
+            "bias": -12.961822660098521,
+            "n": 203
+          },
+          "carrot": {
+            "mae": 62.13009950248756,
+            "bias": 8.76044776119403,
+            "n": 201
+          },
+          "tomato": {
+            "mae": 38.25566502463054,
+            "bias": -5.369458128078818,
+            "n": 203
+          }
+        }
+      },
+      "mean_28d": {
+        "basket_mae": 4043.83362680816,
+        "basket_bias": 9.613705428391578,
+        "complete_baskets": 201,
+        "commodities": {
+          "beans": {
+            "mae": 108.98326443402527,
+            "bias": -17.888580069051212,
+            "n": 203
+          },
+          "carrot": {
+            "mae": 85.65594387152946,
+            "bias": 9.43814034153956,
+            "n": 201
+          },
+          "tomato": {
+            "mae": 73.34117952081014,
+            "bias": 3.2166192611345803,
+            "n": 203
+          }
+        }
+      },
+      "prior_year": {
+        "basket_mae": 9585.246268656716,
+        "basket_bias": -286.9776119402985,
+        "complete_baskets": 201,
+        "commodities": {
+          "beans": {
+            "mae": 153.08004926108376,
+            "bias": -42.9051724137931,
+            "n": 203
+          },
+          "carrot": {
+            "mae": 184.95646766169153,
+            "bias": -24.249502487562193,
+            "n": 201
+          },
+          "tomato": {
+            "mae": 166.11600985221676,
+            "bias": 60.671674876847284,
+            "n": 203
+          }
+        }
+      },
+      "price_pooled": {
+        "basket_mae": 2629.065095975271,
+        "basket_bias": -1019.8577470357079,
+        "complete_baskets": 201,
+        "commodities": {
+          "beans": {
+            "mae": 76.37798744847095,
+            "bias": -31.511541198737554,
+            "n": 203
+          },
+          "carrot": {
+            "mae": 55.37859994893035,
+            "bias": -9.823812136020655,
+            "n": 201
+          },
+          "tomato": {
+            "mae": 39.69781262617041,
+            "bias": -7.527989081437484,
+            "n": 203
+          }
+        },
+        "pinball_mean": 19.549805679539734,
+        "raw_quantile_coverage": 0.6144975288303131
+      },
+      "weather_pooled": {
+        "basket_mae": 2738.3167355402097,
+        "basket_bias": -1005.3643044634051,
+        "complete_baskets": 201,
+        "commodities": {
+          "beans": {
+            "mae": 75.92191015498962,
+            "bias": -34.60455925554241,
+            "n": 203
+          },
+          "carrot": {
+            "mae": 56.61523515703018,
+            "bias": -9.76833865497072,
+            "n": 201
+          },
+          "tomato": {
+            "mae": 40.035805325642286,
+            "bias": -3.028159208955106,
+            "n": 203
+          }
+        },
+        "pinball_mean": 19.42992435290397,
+        "raw_quantile_coverage": 0.5947281713344317
+      },
+      "price_individual": {
+        "basket_mae": 2629.3693794368137,
+        "basket_bias": -793.8714478511267,
+        "complete_baskets": 201,
+        "commodities": {
+          "beans": {
+            "mae": 74.83145990512465,
+            "bias": -30.13023596361632,
+            "n": 203
+          },
+          "carrot": {
+            "mae": 56.95806588898602,
+            "bias": -4.128068599061027,
+            "n": 201
+          },
+          "tomato": {
+            "mae": 42.44480466177522,
+            "bias": -6.40917385330999,
+            "n": 203
+          }
+        },
+        "pinball_mean": 20.164310421413084,
+        "raw_quantile_coverage": 0.5370675453047776
+      },
+      "weather_individual": {
+        "basket_mae": 2785.3188320348745,
+        "basket_bias": -481.1887028741391,
+        "complete_baskets": 201,
+        "commodities": {
+          "beans": {
+            "mae": 73.47859336252131,
+            "bias": -29.13347909515447,
+            "n": 203
+          },
+          "carrot": {
+            "mae": 61.41650980860629,
+            "bias": 2.5911108365808717,
+            "n": 201
+          },
+          "tomato": {
+            "mae": 41.786533320489546,
+            "bias": -1.1462216570595267,
+            "n": 203
+          }
+        },
+        "pinball_mean": 20.328750436933916,
+        "raw_quantile_coverage": 0.48929159802306427
+      }
+    },
+    "test_block_bootstrap": {
+      "statistic": "Selected minus strongest development baseline absolute basket error",
+      "block_calendar_days": 14,
+      "draws": 1000,
+      "interval_95": [
+        0.0,
+        0.0
+      ]
+    },
+    "later_2026": {
+      "latest_price": {
+        "basket_mae": 2227.451219512195,
+        "basket_bias": 1018.9634146341464,
+        "complete_baskets": 41,
+        "commodities": {
+          "beans": {
+            "mae": 61.98780487804878,
+            "bias": 20.817073170731707,
+            "n": 41
+          },
+          "carrot": {
+            "mae": 39.44024390243902,
+            "bias": 7.9573170731707314,
+            "n": 41
+          },
+          "tomato": {
+            "mae": 50.02439024390244,
+            "bias": 18.195121951219512,
+            "n": 41
+          }
+        }
+      },
+      "mean_28d": {
+        "basket_mae": 4184.096776494081,
+        "basket_bias": 4114.879831693054,
+        "complete_baskets": 41,
+        "commodities": {
+          "beans": {
+            "mae": 123.543431750107,
+            "bias": 112.35287405505635,
+            "n": 41
+          },
+          "carrot": {
+            "mae": 47.769897304236196,
+            "bias": 6.158572243617172,
+            "n": 41
+          },
+          "tomato": {
+            "mae": 101.71936956211668,
+            "bias": 84.1532591641706,
+            "n": 41
+          }
+        }
+      },
+      "prior_year": {
+        "basket_mae": 8939.69512195122,
+        "basket_bias": 4746.036585365854,
+        "complete_baskets": 41,
+        "commodities": {
+          "beans": {
+            "mae": 114.32317073170732,
+            "bias": -20.23780487804878,
+            "n": 41
+          },
+          "carrot": {
+            "mae": 254.92073170731706,
+            "bias": 198.04268292682926,
+            "n": 41
+          },
+          "tomato": {
+            "mae": 67.92682926829268,
+            "bias": -39.52439024390244,
+            "n": 41
+          }
+        }
+      },
+      "price_pooled": {
+        "basket_mae": 1896.428558463613,
+        "basket_bias": 826.2873320312056,
+        "complete_baskets": 41,
+        "commodities": {
+          "beans": {
+            "mae": 52.877759419505324,
+            "bias": 22.444254556669897,
+            "n": 41
+          },
+          "carrot": {
+            "mae": 33.227944388894585,
+            "bias": 2.950830950072302,
+            "n": 41
+          },
+          "tomato": {
+            "mae": 48.3033222019301,
+            "bias": 14.44386561978193,
+            "n": 41
+          }
+        },
+        "pinball_mean": 14.559139607296874,
+        "raw_quantile_coverage": 0.6991869918699187
+      },
+      "weather_pooled": {
+        "basket_mae": 1811.9508974610146,
+        "basket_bias": 378.20290924231864,
+        "complete_baskets": 41,
+        "commodities": {
+          "beans": {
+            "mae": 48.5793476964988,
+            "bias": 15.148900978545662,
+            "n": 41
+          },
+          "carrot": {
+            "mae": 32.48987940739941,
+            "bias": -4.04701271629737,
+            "n": 41
+          },
+          "tomato": {
+            "mae": 48.005659307692554,
+            "bias": 9.831763558016325,
+            "n": 41
+          }
+        },
+        "pinball_mean": 14.39009386494698,
+        "raw_quantile_coverage": 0.6666666666666666
+      },
+      "price_individual": {
+        "basket_mae": 1847.4766432909921,
+        "basket_bias": 555.8970842479677,
+        "complete_baskets": 41,
+        "commodities": {
+          "beans": {
+            "mae": 52.080886309930534,
+            "bias": 19.866493941619918,
+            "n": 41
+          },
+          "carrot": {
+            "mae": 30.8259478143546,
+            "bias": 3.554802256987711,
+            "n": 41
+          },
+          "tomato": {
+            "mae": 46.60750619450231,
+            "bias": 2.5961568852968964,
+            "n": 41
+          }
+        },
+        "pinball_mean": 14.43932963236064,
+        "raw_quantile_coverage": 0.6504065040650406
+      },
+      "weather_individual": {
+        "basket_mae": 1667.303320579611,
+        "basket_bias": -60.28955060967515,
+        "complete_baskets": 41,
+        "commodities": {
+          "beans": {
+            "mae": 49.75568336990287,
+            "bias": 14.240102735397686,
+            "n": 41
+          },
+          "carrot": {
+            "mae": 29.73675158204799,
+            "bias": -10.426177098176893,
+            "n": 41
+          },
+          "tomato": {
+            "mae": 49.53020044890204,
+            "bias": -1.6153146186161018,
+            "n": 41
+          }
+        },
+        "pinball_mean": 14.552517040131029,
+        "raw_quantile_coverage": 0.6341463414634146
+      }
+    }
+  },
+  "tuning": {
+    "latest_price": {
+      "basket_mae": 4559.551546391753,
+      "basket_bias": 180.61340206185568,
+      "complete_baskets": 97,
+      "commodities": {
+        "beans": {
+          "mae": 66.55412371134021,
+          "bias": 3.13659793814433,
+          "n": 97
+        },
+        "carrot": {
+          "mae": 111.51804123711341,
+          "bias": 6.373711340206185,
+          "n": 97
+        },
+        "tomato": {
+          "mae": 53.90979381443299,
+          "bias": -3.666494845360825,
+          "n": 97
+        }
+      }
+    },
+    "mean_28d": {
+      "basket_mae": 10036.831926055476,
+      "basket_bias": 1030.06299091071,
+      "complete_baskets": 97,
+      "commodities": {
+        "beans": {
+          "mae": 109.03098231411046,
+          "bias": 8.753760521348934,
+          "n": 97
+        },
+        "carrot": {
+          "mae": 219.33940068124866,
+          "bias": 26.158002864389907,
+          "n": 97
+        },
+        "tomato": {
+          "mae": 133.46219855521548,
+          "bias": 3.5123847276016864,
+          "n": 97
+        }
+      }
+    },
+    "prior_year": {
+      "basket_mae": 15477.829896907217,
+      "basket_bias": -13638.458762886597,
+      "complete_baskets": 97,
+      "commodities": {
+        "beans": {
+          "mae": 129.04742268041238,
+          "bias": -108.62164948453608,
+          "n": 97
+        },
+        "carrot": {
+          "mae": 325.410824742268,
+          "bias": -288.4726804123711,
+          "n": 97
+        },
+        "tomato": {
+          "mae": 200.2438144329897,
+          "bias": -140.59226804123713,
+          "n": 97
+        }
+      }
+    },
+    "price_pooled": {
+      "basket_mae": 4032.992060722936,
+      "basket_bias": -1099.7780149439384,
+      "complete_baskets": 97,
+      "commodities": {
+        "beans": {
+          "mae": 59.0289476171338,
+          "bias": -17.545000529078138,
+          "n": 97
+        },
+        "carrot": {
+          "mae": 107.78551404132028,
+          "bias": -11.785632593663882,
+          "n": 97
+        },
+        "tomato": {
+          "mae": 55.72800358526316,
+          "bias": -19.76545132762295,
+          "n": 97
+        }
+      }
+    },
+    "weather_pooled": {
+      "basket_mae": 3786.14178824159,
+      "basket_bias": -1317.5200555619933,
+      "complete_baskets": 97,
+      "commodities": {
+        "beans": {
+          "mae": 61.35468641520009,
+          "bias": -17.13645387186857,
+          "n": 97
+        },
+        "carrot": {
+          "mae": 104.8470488441286,
+          "bias": -16.42432676986941,
+          "n": 97
+        },
+        "tomato": {
+          "mae": 57.97655423260328,
+          "bias": -24.103058751426985,
+          "n": 97
+        }
+      }
+    },
+    "price_individual": {
+      "basket_mae": 4085.8052918656635,
+      "basket_bias": -1488.402349674155,
+      "complete_baskets": 97,
+      "commodities": {
+        "beans": {
+          "mae": 64.63981941589668,
+          "bias": -21.443912586810427,
+          "n": 97
+        },
+        "carrot": {
+          "mae": 102.41061026562237,
+          "bias": -20.43603366056936,
+          "n": 97
+        },
+        "tomato": {
+          "mae": 49.279912171414466,
+          "bias": -22.322154406043275,
+          "n": 97
+        }
+      }
+    },
+    "weather_individual": {
+      "basket_mae": 3926.650389697374,
+      "basket_bias": -1437.5637656205706,
+      "complete_baskets": 97,
+      "commodities": {
+        "beans": {
+          "mae": 65.54452285134212,
+          "bias": -31.666420923904493,
+          "n": 97
+        },
+        "carrot": {
+          "mae": 103.66912317327606,
+          "bias": -10.821979870436282,
+          "n": 97
+        },
+        "tomato": {
+          "mae": 48.94968066297629,
+          "bias": -23.978797551469622,
+          "n": 97
+        }
+      }
+    }
+  },
+  "intervals": {
+    "test_2025": {
+      "nominal": 0.8,
+      "observed_coverage": 0.7810945273631841,
+      "mean_width": 8855.585281952704,
+      "n": 201,
+      "calibration_n": 105,
+      "overlapping_targets": true
+    },
+    "later_2026": {
+      "nominal": 0.8,
+      "observed_coverage": 0.8292682926829268,
+      "mean_width": 7883.663078036429,
+      "n": 41,
+      "calibration_n": 105,
+      "overlapping_targets": true
+    }
+  },
+  "rolling_development": {
+    "train_2022_validate_2023": {
+      "price_pooled": {
+        "basket_mae": 1628.0837574598409,
+        "basket_bias": -13.449631520893599,
+        "complete_baskets": 211,
+        "commodities": {
+          "beans": {
+            "mae": 42.24806271083547,
+            "bias": -7.008568686691549,
+            "n": 211
+          },
+          "carrot": {
+            "mae": 30.734321953289456,
+            "bias": -0.5743909655580273,
+            "n": 211
+          },
+          "tomato": {
+            "mae": 33.8679549264289,
+            "bias": 7.197673558983913,
+            "n": 211
+          }
+        }
+      },
+      "latest_price": {
+        "basket_mae": 1584.9573459715639,
+        "basket_bias": -82.4218009478673,
+        "complete_baskets": 211,
+        "commodities": {
+          "beans": {
+            "mae": 45.79265402843602,
+            "bias": 2.0902843601895733,
+            "n": 211
+          },
+          "carrot": {
+            "mae": 28.749763033175356,
+            "bias": -2.204265402843602,
+            "n": 211
+          },
+          "tomato": {
+            "mae": 30.690284360189573,
+            "bias": -2.9049763033175346,
+            "n": 211
+          }
+        }
+      }
+    }
+  },
+  "reference_basket": {
+    "beans": 20.0,
+    "carrot": 30.0,
+    "tomato": 20.0
+  },
+  "weather_available": true,
+  "operating_coverage": {
+    "train": {
+      "scheduled_report_dates": 474,
+      "complete_input_dates": 456,
+      "withheld_input_dates": 18,
+      "stale_or_missing_price_rows": 0,
+      "complete_evaluated_baskets": 401,
+      "missing_weather_labels_excluded": 0,
+      "scheduled_dates_not_scored": 73,
+      "note": "Not scored includes incomplete targets, insufficient history and purged boundary windows. Schedule is source-report dates, not every calendar day."
+    },
+    "tuning": {
+      "scheduled_report_dates": 111,
+      "complete_input_dates": 111,
+      "withheld_input_dates": 0,
+      "stale_or_missing_price_rows": 0,
+      "complete_evaluated_baskets": 97,
+      "missing_weather_labels_excluded": 0,
+      "scheduled_dates_not_scored": 14,
+      "note": "Not scored includes incomplete targets, insufficient history and purged boundary windows. Schedule is source-report dates, not every calendar day."
+    },
+    "calibration": {
+      "scheduled_report_dates": 120,
+      "complete_input_dates": 120,
+      "withheld_input_dates": 0,
+      "stale_or_missing_price_rows": 0,
+      "complete_evaluated_baskets": 105,
+      "missing_weather_labels_excluded": 0,
+      "scheduled_dates_not_scored": 15,
+      "note": "Not scored includes incomplete targets, insufficient history and purged boundary windows. Schedule is source-report dates, not every calendar day."
+    },
+    "test_2025": {
+      "scheduled_report_dates": 235,
+      "complete_input_dates": 233,
+      "withheld_input_dates": 2,
+      "stale_or_missing_price_rows": 2,
+      "complete_evaluated_baskets": 201,
+      "missing_weather_labels_excluded": 0,
+      "scheduled_dates_not_scored": 34,
+      "note": "Not scored includes incomplete targets, insufficient history and purged boundary windows. Schedule is source-report dates, not every calendar day."
+    },
+    "later_2026": {
+      "scheduled_report_dates": 46,
+      "complete_input_dates": 46,
+      "withheld_input_dates": 0,
+      "stale_or_missing_price_rows": 0,
+      "complete_evaluated_baskets": 41,
+      "missing_weather_labels_excluded": 0,
+      "scheduled_dates_not_scored": 5,
+      "note": "Not scored includes incomplete targets, insufficient history and purged boundary windows. Schedule is source-report dates, not every calendar day."
+    }
+  },
+  "coverage": {
+    "package_rows": 125576,
+    "selected_all_year_rows": 6660,
+    "selected_missing": 157,
+    "retained_rows": 2958,
+    "retained_valid": 2926,
+    "start": "2022-01-03",
+    "end": "2026-03-10",
+    "corrections": 3,
+    "primary_quotes_checked": 15,
+    "sample_audit_years": [
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "audit_limit": "2022 sample report URL returned 404. No primary 2022 quote verified. Parser failures and failed retrieval attempts remain in the review log; successful reparses are listed in source_audit.json.",
+    "excluded": "All data before 2022; disputed 2021 keys unavailable",
+    "recent_extension": "Single October reference date kept separate; not appended to model history",
+    "licence": "Package declares GPL-3; upstream CBSL reuse terms require confirmation before external operational use."
+  },
+  "limitations": [
+    "Historical source publication times and weather vintages are unavailable.",
+    "Overlapping seven-day labels and one calibration period limit independent evidence.",
+    "No completed buyer pilot, verified savings or invoice-cost validation.",
+    "Price-source upstream reuse terms are not confirmed; private research demonstration only.",
+    "Sample source audit is not a full archive audit. Data before 2022 excluded.",
+    "2026 values are a later-period check, not inputs for selection or calibration."
+  ]
+}

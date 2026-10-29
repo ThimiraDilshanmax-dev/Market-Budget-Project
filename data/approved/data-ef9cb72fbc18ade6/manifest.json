@@ -1,0 +1,10 @@
+{
+  "id": "data-ef9cb72fbc18ade6",
+  "files": {
+    "prices.csv": "5dab52e135553b70a91081347c2e01cbda81a65e948b9595045166bfd4b31c1c",
+    "weather.csv": "077bac89978f8543c0aac207bdf2508363d2dc988bb4c4b3aa5b367ff1bf50b5",
+    "corrections.json": "dc9c0dfe61baacaac89ffe66268e347c9bf8e5b2a6dacd91da41b000b084c4a5",
+    "coverage.json": "e1c9f1bcd96007daf67557f8ab59cb05d505b17023b4078af8183a7bf7d725cd",
+    "source_audit.json": "0a268db650598b639e9c6d38865df3b587186af7a1032601d3e05955fd7f4371"
+  }
+}
